@@ -9,16 +9,12 @@
         My peachy Nuxt.js project
       </h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
+        <nuxt-link
+          to="/about"
           class="button--grey"
         >
-          GitHub
-        </a>
+          about页面
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -26,7 +22,7 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
-import { getBanner } from '@/api/api'
+import { getArticleGroups } from '@/api/api'
 
 export default {
   components: {
@@ -38,14 +34,14 @@ export default {
     }
   },
   async asyncData(context) {
-    const res = await getBanner()
+    const res = await getArticleGroups()
     console.log('1111', res)
     return {
       res: res.data
     }
   }
   // async created() {
-  //   const res = await getBanner()
+  //   const res = await getArticleGroups()
   //   console.log(res)
 
   // }

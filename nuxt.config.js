@@ -39,7 +39,7 @@ module.exports = {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
+    // '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     '@nuxtjs/proxy'
@@ -63,14 +63,14 @@ module.exports = {
   // 请求代理
   proxy: [
     [
-      '/daili',
+      '/cmsapi',
       {
         target: 'https://cmstest.fooww.com',
         secure: false,
         ws: true,
         changeOrigin: true,
         pathRewrite: {
-          '^/daili': '/'
+          '^/cmsapi': '/'
         }
       }
     ]
