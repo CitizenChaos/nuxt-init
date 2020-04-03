@@ -18,6 +18,7 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import { getArticleGroups } from '@/api/api'
+import { Toast } from 'vant'
 
 export default {
   components: {
@@ -39,11 +40,10 @@ export default {
     goToAbout() {
       this.$router.push('/about')
     }
+  },
+  created() {
+    
   }
-  // async created() {
-  //   const res = await getArticleGroups()
-  //   console.log(res)
-  // }
 }
 </script>
 
