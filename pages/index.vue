@@ -15,6 +15,7 @@
         >
           about页面
         </nuxt-link>
+        <van-button type="primary">主要按钮</van-button>
       </div>
     </div>
   </div>

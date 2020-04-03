@@ -20,11 +20,15 @@
     "axios": "^0.19.2",
     "cross-env": "^5.2.0",
     "koa": "^2.6.2",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vant": "^2.5.9"
   },
   "devDependencies": {
+    "babel-plugin-import": "^1.13.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
     "nodemon": "^1.18.9",
     "prettier": "^1.19.1",
     "shelljs": "^0.8.3"

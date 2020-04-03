@@ -23,14 +23,13 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [
-    { src: '@/assets/global.css' }
-  ],
+  css: [{ src: '@/assets/global.css' }],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '@/assets/rem.js', ssr: false }
+    { src: '@/assets/rem.js', ssr: false },
+    { src: '@/plugins/vant.js', ssr: true }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -58,7 +57,25 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {},
+
+    // 添加这个是关键，添加后babel才会处理依赖包vant里面的代码
+    transpile: [/vant.*?less/],
+
+    babel: {
+      plugins: [
+        [
+          'import',
+          {
+            libraryName: 'vant',
+            style: (name) => {
+              return `${name}/style/less.js`
+            }
+          },
+          'vant'
+        ]
+      ]
+    }
   },
   // 请求代理
   proxy: [
