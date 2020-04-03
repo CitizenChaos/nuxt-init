@@ -88,3 +88,8 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# pm2
+# add by liwei 2020-01-14.
+# 自动生成
+ecosystem.yml

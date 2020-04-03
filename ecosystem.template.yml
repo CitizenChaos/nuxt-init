@@ -1,0 +1,15 @@
+apps:
+  - script: "server/index.js"
+    cwd: "."
+    name: "<%=appName %>"
+    instances: 4
+    exec_mode: cluster
+    output: "logs/<%=appName %>.log"
+    error: "logs/<%=appName %>-error.log"
+    merge_logs: true
+    log_date_format: "YYYY-MM-DD HH:mm Z"
+    max_memory_restart: "300M"
+    env:
+      NODE_ENV: "<%=node_env %>"
+      NODE_ENV_DEPLOY: "<%=node_env_deploy %>"
+      CONSOLA_LEVEL: "<%=consola_level %>"
