@@ -1,5 +1,11 @@
 module.exports = {
   mode: 'universal',
+  server: {
+    port: process.env.NODE_ENV_DEPLOY === 'production' ? 3100 : 3000
+  },
+  env: {
+    node_env_deploy: process.env.NODE_ENV_DEPLOY
+  },
   /*
    ** Headers of the page
    */

@@ -9,13 +9,7 @@
         My peachy Nuxt.js project
       </h2>
       <div class="links">
-        <nuxt-link
-          to="/about"
-          class="button--grey"
-        >
-          about页面
-        </nuxt-link>
-        <van-button type="primary">主要按钮</van-button>
+        <van-button type="primary" class="btn" @click="goToAbout">About页面</van-button>
       </div>
     </div>
   </div>
@@ -40,16 +34,20 @@ export default {
     return {
       res: res.data
     }
+  },
+  methods: {
+    goToAbout() {
+      this.$router.push('/about')
+    }
   }
   // async created() {
   //   const res = await getArticleGroups()
   //   console.log(res)
-
   // }
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -64,20 +62,29 @@ export default {
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 1rem;
   color: #35495e;
   letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
+  font-size: 0.42rem;
   color: #526488;
   word-spacing: 5px;
-  padding-bottom: 15px;
+  padding-bottom: 0.15rem;
 }
 
 .links {
-  padding-top: 15px;
+  padding-top: 0.15rem;
+  .btn {
+    width: 2rem;
+    height: 1rem;
+    font-size: 0.15rem;
+    line-height: 1rem;
+    padding: 0;
+  }
+
 }
+
 </style>
