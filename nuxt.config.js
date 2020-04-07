@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'universal',
   server: {
-    port: process.env.NODE_ENV_DEPLOY === 'production' ? 3100 : 3000
+    port: process.env.NODE_ENV_DEPLOY === 'production' ? 3300 : 3200
   },
   env: {
     node_env_deploy: process.env.NODE_ENV_DEPLOY

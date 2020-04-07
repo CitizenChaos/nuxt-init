@@ -48,12 +48,12 @@ step 2. 通过 xshell 复制到相应目录下
 
 如：
 
-> /usr/local/node_app/foowwhome-test
+> /usr/local/node_app/foowwhomemobile-test
 
 step 3. ecosystem.yml 所在根目录
 
 ```bash
-cd /usr/local/node_app/foowwhome-test
+cd /usr/local/node_app/foowwHomeMobile-test
 # 首次运行
 pm2 start ecosystem.yml
 # 开机启动
@@ -67,7 +67,7 @@ pm2 restart ecosystem.yml
 step 4: 查看日志
 
 ```bash
-tail -n 100 -f logs/foowwhome-test.log
+tail -n 100 -f logs/foowwHomeMobile-test.log
 ```
 
 ### 服务端渲染应用部署
